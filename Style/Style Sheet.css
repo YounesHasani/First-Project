@@ -1,0 +1,232 @@
+* {box-sizing: border-box;}
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {font-weight: normal;}
+#content-container {
+    width: 1100px;
+    margin: auto;
+    padding-top: 20px;
+}
+#top-nav {
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 242, 242);
+    z-index: 1;
+}
+#top-nav a {
+    flex: 25%;
+    text-align: center;
+    padding: 12px 0px;
+    text-decoration: none;
+    color: black;
+}
+#top-nav a:hover {background-color: rgb(208, 208, 208);}
+#marketing {
+    background-image: url("../Img/man.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 10px;
+}
+#marketing span {
+    position: absolute;
+    left: 15px;
+    padding: 12px 20px;
+    background-color: white;
+    text-align: center;
+    animation-name: lorem;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes lorem {
+    from {top: 50%; opacity: 0;}
+    to {top: 15px; opacity: 1;}
+}
+#slide-bar {
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(92, 92, 92);
+}
+#slide-bar div .slide-bar-square {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    margin: 0px 2px 0px;
+    border: solid thin white;
+    float: left;
+    cursor: pointer;
+}
+#slide-bar div .slide-bar-square:hover {background-color: white;}
+#right-arrow, #left-arrow {
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 50%;
+    color: rgb(92, 92, 92);
+    cursor: pointer;
+}
+#right-arrow:hover, #left-arrow:hover {background-color: rgb(0, 160, 0);}
+#offer-header {
+    width: 160px;
+    margin: auto;
+    text-align: center;
+    border-bottom: solid 6px gray;
+    margin-top: 100px;
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+#offer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+#offer-box div {
+    padding: 5px 20px;
+    flex: 25%;
+}
+.offer-box-header {font-weight: normal;}
+#price-container {display: flex;}
+#price-container > div {
+    border: solid thin lightgray;
+    flex: 33.33%;
+    margin: 10px;
+    text-align: center;
+}
+#price-container > div:hover {box-shadow: 1px 1px 15px rgb(138, 138, 138);}
+#price-container > div h2 {
+    color: white;
+    font-weight: normal;
+    padding: 35px;
+    margin: 0px;
+}
+#price-container > div p {
+    border-bottom: solid thin lightgray;
+    padding-bottom: 15px;
+}
+.sign-up-button {
+    cursor: pointer;
+    padding: 14px 20px;
+    background-color: rgb(77, 179, 77);
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+.sign-up-button:hover {
+    background-color: lightgray;
+    color: black;
+    /* background-color: green;
+    color: white; */
+}
+#who-we-are-header {
+    width: 135px;
+    text-align: center;
+    border-bottom: solid 6px gray;
+    margin: 100px auto 50px;
+    padding-bottom: 15px;
+    font-weight: normal;
+}
+#member-container {display: flex;}
+#member-container > div {
+    flex-basis: 33.33%;
+    margin: 10px;
+    box-shadow: 1px 1px 15px rgb(166, 166, 166);
+}
+#member-container > div img {width: 100%;}
+#member-container button {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(242, 242, 242);
+}
+#member-container button:hover {background-color: lightgray;}
+#contact-us-header {
+    width: 120px;
+    text-align: center;
+    border-bottom: solid 6px gray;
+    margin: 62.5px auto 62.5px;
+    padding-bottom: 15px;
+}
+form input {
+    width: 100%;
+    padding: 15px;
+    margin: 3px 0px 25px;
+    border: solid 2px lightgray;
+}
+form input:hover {
+    border: solid 2px black;
+}
+form input[type="submit"] {
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: lightgray;
+    color: black;
+}
+#footer {
+    text-align: center;
+    padding: 25px;
+    background-color: rgb(242, 242, 242);
+    height: 200px;
+}
+#footer a {
+    background-color: black;
+    color: white;
+    text-decoration-line: none;
+    padding: 10px 16px;
+}
+#footer a:hover {
+    background-color: rgb(179, 178, 178);
+    color: black;
+}
+@media screen and (max-width: 1050px) {
+    #content-container {
+        width: 100%;
+        margin: none;
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #offer-box {
+        flex-wrap: wrap;
+    }
+    #offer-box div {
+        flex: 50%;
+    }
+}
+@media screen and (max-width: 600px) {
+    #offer-box div {
+        flex: 100%;
+    }
+    #price-container {
+        flex-wrap: wrap;
+    }
+    #price-container > div {
+        flex: 100%;
+    }
+    #member-container {
+        flex-wrap: wrap;
+    }
+    #member-container > div {
+        flex: 100%;
+    }
+}
